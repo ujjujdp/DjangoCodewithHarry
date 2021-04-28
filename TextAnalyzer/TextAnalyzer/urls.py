@@ -1,7 +1,7 @@
-"""capitalize URL Configuration
+"""TextAnalyzer URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,9 +20,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
-    path('removepunc',views.removepunc,name="removepunc"),
-    path('capitalizefirst',views.capfirst,name="capfirst"),
-    path('newlineremove',views.newlineremove,name="newlineremove"),
-    path('spaceremover',views.spaceremover,name="spaceremover"),
-    path('charcount',views.charcount,name="charcount"),
+    path('analyzetext',views.analyzetext,name="analyze"),
+    # path('removepunc',views.removepunc,name="removepunc"),
+    # path('capitalizefirst',views.capfirst,name="capfirst"),
+    # path('newlineremove',views.newlineremove,name="newlineremove"),
+    # path('spaceremover',views.spaceremover,name="spaceremover"),
+    # path('charcount',views.charcount,name="charcount"),
 ]

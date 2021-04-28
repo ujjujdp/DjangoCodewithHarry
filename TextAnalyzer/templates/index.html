@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Text Analyzer</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Text Analyzer</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+            <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </div>
+        </div>
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+    </nav>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Welcome to Text Analyzer</strong> You can do anything with your text here.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="container">
+        <form action='/analyzetext' method='post'>{% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Enter your Text here.</label>
+            <textarea class="form-control"  name="text" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+
+        <div class="custom-control custom-switch">
+        <input type="checkbox" name="removepunc" class="custom-control-input" id="cs1">
+        <label class="custom-control-label" for="cs1">Remove Punctuations</label>
+        </div>
+        <div class="custom-control custom-switch">
+        <input type="checkbox" name="cap" class="custom-control-input" id="cs2">
+        <label class="custom-control-label" for="cs2">Capitalize</label>
+        </div>
+        <div class="custom-control custom-switch">
+        <input type="checkbox" name="nlr" class="custom-control-input" id="cs3">
+        <label class="custom-control-label" for="cs3">New Line Remover</label>
+        </div>
+        <div class="custom-control custom-switch">
+        <input type="checkbox" name="sr" class="custom-control-input" id="cs4">
+        <label class="custom-control-label" for="cs4">Space Remover</label>
+        </div>
+        <div class="custom-control custom-switch">
+        <input type="checkbox" name="cc" class="custom-control-input" id="cs5">
+        <label class="custom-control-label" for="cs5">Character Counter</label>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html> 

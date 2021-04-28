@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> Text Analyzer </title>
+    </head> 
+    <body>
+        <h1>Welcome to the Text Analyzer</h1>
+        <p>Created by {{name}}. He is from {{place}}</p>
+        <p>Enter your text below</p>
+        <form action='/analyzetext' method='get'>
+            <textarea name='text' style="margin: 0px; width: 915px; height: 68px;"></textarea>
+            <br>        
+            <input type="checkbox" name="removepunc">Remove Punctuations</input>
+            <br>
+            <input type="checkbox" name="cap">Capitalize</input>
+            <br>
+            <input type="checkbox" name="nlr">New Line Remover</input>
+            <br>
+            <input type="checkbox" name="sr">Space Remover</input>
+            <br>
+            <input type="checkbox" name="cc">Character Counter</input>
+            <br>
+            <button type='submit'>Analyze Text</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> Analyze Text </title>
+    </head> 
+    <body>
+    <h1>Welcome to the Text Analyzer</h1>   
+    <h2>Your Analyzed Text - {{purpose}}</h2>
+    <p>
+        {{analyzed_text}}
+    </p>
+    </body>
+</html>
